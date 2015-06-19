@@ -1,9 +1,9 @@
+/*jslint node: true, devel:true */
 "use strict";
 
-var app = require('../app');
+var http = require('../app');
+//Require our app
 
-var server = app.listen(app.get('port'), function () {
-    console.log('Express server listening on port ' + server.address().port);
+var server = http.listen(3000, function () {
+    console.log('Yo Dawg I Am Listening On Port ' + 3000);
 });
-
-

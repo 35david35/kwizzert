@@ -4,7 +4,9 @@ var mongoose = require('mongoose'), Schema = mongoose.Schema;
 var teamSchema = Schema({
     naam : String,
     score : Number,
-    rondPunten : Number
+    rondePunten : Number
 });
 
-var team = mongoose.model('Team', teamSchema, 'teams');
+var Team = mongoose.model('Team', teamSchema, 'Teams');
+
+module.exports = Team;

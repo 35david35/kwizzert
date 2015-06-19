@@ -1,16 +1,16 @@
 {
-  "name": "kwizzert",
+  "name": "Movie-CRUD-API",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www.js"
+    "start": "node ./bin/www"
   },
   "main": "./bin/www",
   "dependencies": {
-    "body-parser": "^1.9.2",
-    "express": "^4.9.6",
+    "body-parser": "^1.9.0",
+    "express": "^4.9.5",
     "express-session": "^1.9.1",
-    "mongoose": "^3.8.17",
+    "mongoose": "^3.8.16",
     "socket.io": "^1.2.0"
   }
 }

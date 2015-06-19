@@ -10,37 +10,22 @@ function getKwizzMeestertId (username) {
         if (doc) {
             return doc._id;
         }
-    })
+    });
 }
 
-exports.nieuweKwizz = function (req, res) {
-    KwizzMeestert.findOne({gebruikersnaam: req.session.username}, function (err, doc) {
-        if (err) {
-            return res.send({
+exports.getQuiz = function (req, res) {
+    KwizzUitvoering.findOne({ _id: req.session.quiz }, function(err, doc){
+        if(err) {
+            res.send({
                 doc: null,
                 err: err
-            })
+            });
         }
-        if (doc) {
-            var nieuweKwizz = new KwizzUitvoering({
-                kwizzMeestert: doc._id,
-                teams: [],
-                wachtwoord: req.body.wachtwoord
-            })
-            nieuweKwizz.save(function (err) {
-                if (err) {
-                    return res.send({
-                        doc: null,
-                        err: err
-                    })
-                }
-                res.send({
-                    doc: doc,
-                    err: err,
-                    meta: {}
-                });
-            })
-        }
+        
+        res.send({            
+            doc: doc,
+            err: null
+        });        
     });
 };
 
@@ -50,7 +35,7 @@ exports.getKwizz = function (req, res) {
             return res.send({
                 doc: null,
                 err: err
-            })
+            });
         }
         if (doc) {
             KwizzUitvoering.findOne({kwizzMeestert: doc._id}, function (err, doc) {
@@ -58,13 +43,13 @@ exports.getKwizz = function (req, res) {
                     return res.send({
                         doc: null,
                         err: err
-                    })
+                    });
                 }
                 res.send({
                     doc: doc,
                     err: err
-                })
+                });
             });
         }
-    })
+    });
 };

@@ -1,0 +1,246 @@
+[
+    {
+        "tekst": "Wat is de hoofdstad van Frankrijk?",
+        "antwoord": "Parijs",
+        "categorie": "Algemeen"
+    }, 
+    {
+        "tekst": "Wat is de kleinste euromunt?",
+        "antwoord": "1 Cent",
+        "categorie": "Algemeen"
+    }, 
+    {
+        "tekst": "Hoeveel hoeken heeft een kubus?",
+        "antwoord": "8",
+        "categorie": "Algemeen"
+    }, 
+    {
+        "tekst": "In welke maand begint de herfst?",
+        "antwoord": "September",
+        "categorie": "Algemeen"
+    }, 
+    {
+        "tekst": "Hoe heet de vriend van de pop Barbie?",
+        "antwoord": "Ken",
+        "categorie": "Algemeen"
+    },
+    {
+        "tekst": "In welke maand begint de herfst?",
+        "antwoord": "September",
+        "categorie": "Algemeen"
+    }, 
+    {
+        "tekst": "Welke maand heeft meestal 28 dagen en soms 29 dagen?",
+        "antwoord": "Februari",
+        "categorie": "Algemeen"
+    },
+    {
+        "tekst": "Wat is het tegenoverstelde van conservatief?",
+        "antwoord": "Progressief",
+        "categorie": "Algemeen"
+    },
+    {
+        "tekst": "Welke feestdag wordt 40 dagen na Pasen gevierd?",
+        "antwoord": "Hemelvaartsdag",
+        "categorie": "Algemeen"
+    },
+    {
+        "tekst": "Hoe wordt de verstoring van het slaap-waakritme genoemd?",
+        "antwoord": "Jetlag",
+        "categorie": "Algemeen"
+    },
+    {
+        "tekst": "Hoe heet het duizendste deel van een kilogram?",
+        "antwoord": "Een gram",
+        "categorie": "Algemeen"
+    },
+    {
+        "tekst": "Wat doen amerikanen het liefst?",
+        "antwoord": "Shoppen",
+        "categorie": "Algemeen"
+    },
+    
+    {
+        "tekst": "Hoe wordt een korte film op muziek genoemd?",
+        "antwoord": "Videoclip",
+        "categorie": "Muziek"
+    }, 
+    {
+        "tekst": "Waarvan is DJ de afkorting?",
+        "antwoord": "Disc jockey",
+        "categorie": "Muziek"
+    },
+    {
+        "tekst": "Wie is onlangs uitgeroepen tot beste DJ van de wereld?",
+        "antwoord": "Hardwell",
+        "categorie": "Muziek"    
+    },
+        {
+        "tekst": "Wat is de beste nummer ooit gemaakt?",
+        "antwoord": "Comfortably Numb",
+        "categorie": "Muziek"
+    }, 
+    {
+        "tekst": "Waar staat de afkorting CD voor?",
+        "antwoord": "Compact Dics",
+        "categorie": "Muziek"
+    },
+    {
+        "tekst": "Waar staat de afkorting DVD voor?",
+        "antwoord": "Digital Versatile Disc",
+        "categorie": "Muziek"    
+    },
+        {
+        "tekst": "Wat is muziek?",
+        "antwoord": "Hier is geen eenduidige definitie voor.",
+        "categorie": "Muziek"
+    }, 
+    {
+        "tekst": "Wat is het verschil tussen hardcore en hardstyle",
+        "antwoord": "Geen idee",
+        "categorie": "Muziek"
+    },
+    {
+        "tekst": "Hoe heet de dikste zangeres ter wereld",
+        "antwoord": "Adele",
+        "categorie": "Muziek"    
+    },
+    {
+        "tekst": "Welke domme muts zingt altijd over haar breakups?",
+        "antwoord": "Taylor Swift",
+        "categorie": "Muziek"
+    }, 
+    {
+        "tekst": "Wie is de snelste rapper ter wereld?",
+        "antwoord": "Rebel XD",
+        "categorie": "Muziek"
+    },
+    {
+        "tekst": "Wat is het langste nummer ooit gemaakt?",
+        "antwoord": "Light of Day, Day of Darkness",
+        "categorie": "Muziek"    
+    },
+    
+    {
+        "tekst": "wat is de wortel van  4?",
+        "antwoord": "2",
+        "categorie": "Wiskunde"
+    },
+        {
+        "tekst": "Hoeveel is 1 + 1?",
+        "antwoord": "2",
+        "categorie": "Wiskunde"
+    }, 
+        {
+        "tekst": "Hoeveel is 2 + 2?",
+        "antwoord": "4",
+        "categorie": "Wiskunde"
+    }, 
+        {
+        "tekst": "Hoeveel is 1 + 2?",
+        "antwoord": "3",
+        "categorie": "Wiskunde"
+    }, 
+        {
+        "tekst": "Hoeveel is 1 + 3?",
+        "antwoord": "4",
+        "categorie": "Wiskunde"
+    }, 
+        {
+        "tekst": "Hoeveel is 2 + 5?",
+        "antwoord": "5",
+        "categorie": "Wiskunde"
+    }, 
+        {
+        "tekst": "Hoeveel is 55+ 3?",
+        "antwoord": "2",
+        "categorie": "Wiskunde"
+    },
+        {
+        "tekst": "Hoeveel is 56 + 3?",
+        "antwoord": "2",
+        "categorie": "Wiskunde"
+    }, 
+        {
+        "tekst": "Hoeveel is 85 + 3?",
+        "antwoord": "2",
+        "categorie": "Wiskunde"
+    }, 
+        {
+        "tekst": "Hoeveel is 96 + 3?",
+        "antwoord": "2",
+        "categorie": "Wiskunde"
+    }, 
+        {
+        "tekst": "Hoeveel is 15519 + 3?",
+        "antwoord": "2",
+        "categorie": "Wiskunde"
+    }, 
+        {
+        "tekst": "Hoeveel is 1561 + 3?",
+        "antwoord": "2",
+        "categorie": "Wiskunde"
+    }, 
+    
+    
+    {
+        "tekst": "Wanneer is de paus jarig?",
+        "antwoord": "13 maart",
+        "categorie": "Geloof"
+    },
+    {
+        "tekst": "Waar moet je op zondag heen?",
+        "antwoord": "Naar de kerk",
+        "categorie": "Geloof"
+    },
+    {
+        "tekst": "Wat doen pastoors met kleine kinderen?",
+        "antwoord": "Dopen, niet zo vies denken he?",
+        "categorie": "Geloof"
+    },
+        {
+        "tekst": "Hoe heet de Paus?",
+        "antwoord": "Franciscus",
+        "categorie": "Geloof"
+    },
+    {
+        "tekst": "Wat dronk Jesus bij zijn laatste maaltijd?",
+        "antwoord": "Wijn",
+        "categorie": "Geloof"
+    },
+    {
+        "tekst": "Waar is een kerk voornamelijk van gemaakt.",
+        "antwoord": "Steen",
+        "categorie": "Geloof"
+    },
+        {
+        "tekst": "Wat maakt een hels kabaal en hangt boven in een kerk?",
+        "antwoord": "Een kerkklok",
+        "categorie": "Geloof"
+    },
+    {
+        "tekst": "Hoeveel kerken zijn er in nederland?",
+        "antwoord": "648",
+        "categorie": "Geloof"
+    },
+    {
+        "tekst": "Wat krijg je als je je comunie doet?",
+        "antwoord": "Een hostie",
+        "categorie": "Geloof"
+    },
+        {
+        "tekst": "Tegen welk geloof heef Wilders een aversie?",
+        "antwoord": "Welke niet?",
+        "categorie": "Geloof"
+    },
+    {
+        "tekst": "Naar welk geloof is een koek vernoemd?",
+        "antwoord": "Joods",
+        "categorie": "Geloof"
+    },
+    {
+        "tekst": "Waarin moet je het meest geloven?",
+        "antwoord": "In jezelf",
+        "categorie": "Geloof"
+    },
+]

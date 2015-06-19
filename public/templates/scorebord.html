@@ -1,0 +1,98 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-header text-center">
+                ScoreBord
+            </div>
+            <div class="panel-body text-center">
+                <div ng-if="!phase">
+                    <h3> Kwizz nog niet gestart </h2>
+                        <h3> Kwizzwachtwoord: {{wachtwoord}} </h3>
+                </div>
+                <div ng-if="phase == 1">
+                    <h3> Wachten op volgende vraag </h3>
+                </div>
+                <div ng-if="phase == 2">
+                    <h3> Ronde {{ronde}}, vraag {{vraagNummer}} </h3>
+                    <h3> Categorie: {{categorie}} </h3>
+                    <h3> {{vraagTekst}} </h3>
+                </div>
+                <div ng-if="phase == 3">
+                    <h3> Vraag gesloten, antwoorden worden verwerkt... </h3>
+                </div>
+                <div ng-if="phase == 4">
+                    <h3> Einde van deze ronde </h3>
+                </div>
+                <div ng-if="phase == 5">
+                    <h3> Start nieuwe ronde: {{ronde}} </h3>
+                </div>
+                <div ng-if="phase == 6">
+                    <h3> De Kwizz is beëindigd door de Kwizzmeestert </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-header">
+                Teams in deze Kwizz:
+            </div>
+            <div class="panel-body">
+                <div ng-repeat="team in teams">
+                    <div class="col-lg-2">
+                        <div ng-if="!kwizzGesloten">
+                            <p>
+                                {{team.naam}}
+                            </p>
+                        </div>
+                        <div ng-if="phase != 6">
+                            <p ng-if="phase != 4">
+                                Aantal goede vragen deze ronde: {{team.rondePunten}}
+                            </p>
+                            <p ng-if="phase == 4">
+                                Aantal rondepunten: {{team.score}}
+                            </p>
+                            <div ng-if="phase == 3">
+                                <p>
+                                    Ingestuurd antwoord: {{team.antwoord}}
+                                </p>
+                                <p ng-if="team.beoordeling==2">
+                                    Fout
+                                </p>
+                                <p ng-if="team.beoordeling==1">
+                                    Goed
+                                </p>
+                            </div>
+                            <div ng-if="phase == 2">
+                                Geantwoord:
+                                <p ng-if="!team.antwoordIngestuurd">
+                                    Nee
+                                </p>
+                                <p ng-if="team.antwoordIngestuurd">
+                                    Ja
+                                </p>
+                            </div>
+                        </div>
+                        <div ng-if="phase == 6">
+                            <p>
+                                Team: {{team.naam}}
+                            </p>
+                            <p>
+                                Totaal aantal rondepunten: {{team.score}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" ng-if="kwizzGesloten">
+                    <div ng-repeat="winnaar in winnaars">
+                        Plaats: {{winnaar.plaats}}
+                        Teamnaam: {{winnaar.naam}}
+                        Rondepunten: {{winnaar.score}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

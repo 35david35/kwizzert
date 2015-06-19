@@ -1,0 +1,109 @@
+<div ng-if="phase === 0">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    Wachten op Kwizzmeestert...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="phase === 1">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    Geaccepteerd door de Kwizzmeestert! Wacht tot de kwizz wordt gestart...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="phase === 2">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    Geweigerd door Kwizzmeestert
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="phase === 3">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    Een categorie en vraag worden geselecteerd door de kwizzmeestert
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="phase === 4">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    <p>Ronde: {{ronde}}</p>
+                    <p>Vraag nummer: {{vraagNummer}}</p>
+                    <p>Vraag: {{vraagTekst}}</p>
+                    <div>
+                        <p ng-if="vraagStatus == 1">Stuur een antwoord in:</p>
+                        <p ng-if="vraagStatus == 2">Antwoord verstuurd! Nieuw antwoord insturen en oude vervangen:</p>
+                        <form ng-submit="verstuurAntwoord()">
+                            <input type="text" ng-model="vraagInfo.tekst">
+                            <button>Verstuur</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="phase === 5">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    Vraag gesloten, wachten op Kwizzmeestert...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="phase === 6">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    Einde van ronde {{ronde}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="phase === 7">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    De KwizzMeestert heeft een nieuwe ronde gestart: ronde {{ronde}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="phase === 8">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    De Kwizzmeestert heeft de Kwizz beëindigd
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

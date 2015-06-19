@@ -1,0 +1,236 @@
+<div ng-if="phase === 0">
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-header">
+                    Quiz starten
+                </div>
+                <div class="panel-body text-center">
+                    <button class="btn btn-warning" ng-click="startQuiz()">
+                        Quiz starten
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-header">
+                    Wachtwoord
+                </div>
+                <div class="panel-body text-center">
+                        <p>{{ quiz.wachtwoord }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-header">
+                    Deelnemers accepteren / weigeren
+                </div>
+                <div class="panel panel-body">
+                    <div ng-repeat="team in teams">
+                        <div class="col-lg-6 signUps">
+                            <h2>{{ team.naam }}</h2>
+                        </div>
+                        <div class="col-lg-6 signUps">
+                            <button type="submit" ng-hide="hideButton[team._id]" class="btn btn-success pull-right" ng-click="approveClient(team._id, team.socketID)">
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </button>
+                            <button type="submit" ng-hide="hideButton[team._id]" class="btn btn-danger pull-right" ng-click="declineClient(team._id)">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div ng-if="phase === 1">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-header">
+                    Kies uw categorieën
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="category in categories">
+                        <div class="col-lg-6 signUps">
+                            <h2>{{ category }}</h2>
+                        </div>
+                        <div class="col-lg-6 signUps">
+                            <button class="btn btn-success" type="submit" ng-click="addCategory(category)">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-header">
+                    Gekozen categorieën
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="category in addedCategories">
+                        <div class="col-lg-6 signUps">
+                            <h2>{{ category }}</h2>
+                        </div>
+                        <div class="col-lg-6 signUps">
+                            <button class="btn btn-danger" type="submit" ng-click="deleteCategory(category)">
+                                <span class="glyphicon glyphicon-minus"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <button class="btn btn-success pull-right" ng-click="getQuestions()">
+                        Ga naar vragen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-include src="'/templates/footer.html'"></ng-include>
+</div>
+<div ng-if="phase === 2">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-header">
+                    Kies een vraag
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="question in questions">
+                        <div class="col-lg-6">
+                            {{ question.tekst }}
+                        </div>
+                        <div class="col-lg-6">
+                            <button class="btn btn-success pull-right" ng-click="startQuestion(question._id)">
+                                <span class="glyphicon glyphicon-play"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-include src="'/templates/footer.html'"></ng-include>
+</div>
+<div ng-if="phase === 3">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-header">
+                    Vraag sluiten
+                </div>
+                <div class="panel-body text-center">
+                    <p>Ronde: {{ronde}} vraag: {{vraagNummer + 1}}</p>
+                    <button class="btn btn-warning" ng-click="stopQuestion()">
+                        Vraag sluiten
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    <p>Vraag: {{ question.tekst }}</p>
+                    <p>Antwoord: {{ question.antwoord }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-include src="'/templates/footer.html'"></ng-include>
+</div>
+<div ng-if="phase === 4">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    <p>Ronde: {{ronde}} vraag: {{vraagNummer + 1}}</p>
+                    <button class="btn btn-warning" ng-click="nextQuestion()">
+                        Volgende vraag
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    <p>Vraag: {{ question.tekst }}</p>
+                    <p>Antwoord: {{ question.antwoord }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel panel-body">
+                    <div ng-repeat="answer in answers">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <h2>{{ answer.team.naam }}</h2>
+                            </div>
+                                <h2>{{ answer.tekst }}</h2>
+                            <div class="col-lg-6">
+                            </div>
+                            <div class="col-lg-4">
+                                <button type="submit" ng-hide="hideAnswerButtons[answer.team._id]" class="btn btn-success pull-right" ng-click="approveAnswer(answer.team._id)">
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                </button>
+                                <button type="submit" ng-hide="hideAnswerButtons[answer.team._id]" class="btn btn-danger pull-right" ng-click="declineAnswer(answer.team._id)">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-include src="'/templates/footer.html'"></ng-include>
+</div>
+<div ng-if="phase === 5">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-header">
+                    Quiz gesloten
+                </div>
+                <div class="panel-body text-center">
+                    <h2>Quiz Gesloten</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    <button class="btn btn-warning" ng-click="newQuiz()">Nieuwe Quiz maken</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

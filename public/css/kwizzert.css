@@ -1,0 +1,17 @@
+/* required for bootstrap fixed navbar */
+body { padding-top: 70px; }
+
+.signUps {
+    height: 50px;
+}
+
+h2 {
+    padding: 0px;
+    margin: 0px;
+    vertical-align:middle;
+}
+
+.btn {
+    margin-left:2px;
+    margin-right:2px;
+}

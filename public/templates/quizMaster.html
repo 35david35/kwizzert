@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-header">
+                Aangemelde teams
+            </div>
+            <div class="panel-body">
+                <form>
+                    <input type="text" class="form-control" value="de josties" disabled><button type="submit" ng-hide="hideButton" class="btn btn-succes pull-right" ng-click="approve(96516519519981)">Approve</button>
+                </form>
+                <div ng-repeat="team in teams">
+                    <form>
+                        <input type="text" class="form-control" value="{{ team.naam }}" disabled>
+                        <button type="submit" ng-hide="hideButton" class="btn btn-succes pull-right" ng-click="approve(team._id)">Approve</button>
+                        <button type="submit" ng-hide="hideButton" class="btn btn-succes pull-right" ng-click="decline(team._id)">Decline</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
